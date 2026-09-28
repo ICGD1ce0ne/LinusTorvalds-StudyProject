@@ -371,3 +371,23 @@ h2 {
     color: #000000;
     font-family: monospace;
 }
+
+.article dl {
+    max-width: 900px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.article dt {
+    margin-top: 24px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.article dd {
+    margin-left: 24px;
+}
+
+.article ul {
+    margin-left: 24px;
+}
