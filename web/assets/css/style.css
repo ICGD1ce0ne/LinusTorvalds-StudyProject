@@ -1,51 +1,14 @@
+/* Сброс стандартных отступов */
 * {
     margin: 0;
     padding: 0;
+    background: #F9F9FF;
     box-sizing: border-box;
 }
 
-/* Хэдер */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 112px;
-    background: #FFFFFF;
-    border-bottom: 1px solid #CCCCCC;
-}
-
-/* Логотип */
-.header__logo {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'MontserratBold', sans-serif;
-    text-decoration: none;
-    color: #000000;
-}
-
-/* Меню */
-.header__nav {
-    display: flex;
-    gap: 24px;
-}
-
-.header__nav a {
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'MontserratRegular', sans-serif;
-    color: #45464C;
-}
-
-.header__nav a:hover {
-    color: #000000;
-}
-
-/* Шрифты */
+/* Все шрифты */
 @font-face {
-    font-family: 'MontserratRegular';
+    font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -53,131 +16,358 @@
 }
 
 @font-face {
-    font-family: 'MontserratMedium';
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'MontserratSemiBold';
+    font-family: 'Montserrat';
     src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'MontserratBold';
+    font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'MontserratMediumItalic';
-    src: url('../fonts/Montserrat-MediumItalic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
     font-display: swap;
 }
 
-/* Контент */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 112px;
+    background: white;
+    border-bottom: 1px solid #cccccc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: #45464c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+/* Основная часть */
 .content {
     max-width: 2400px;
     margin: 0 auto;
     padding: 60px 112px;
 }
 
-/* ===== Заголовок раздела ===== */
-.intro__title {
-    font-family: 'MontserratBold', sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+h1 {
     margin-bottom: 24px;
     padding-bottom: 24px;
     border-bottom: 2px solid #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-/* ===== Блок "фото + текст" ===== */
-.intro__body {
+h1 + h2 {
+    margin-top: 60px;
+}
+
+h2 + h2,
+.quote + h2 {
+    margin-top: 60px;
+}
+
+h2 {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.about {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 60px;
+    padding: 5px 65px;
     align-items: start;
     margin-top: 48px;
 }
 
-/* Фото */
-.intro__figure {
+.photo {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.intro__image {
+.photo img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
     border-radius: 8px;
 }
 
-.intro__caption {
-    font-family: 'MontserratRegular', sans-serif;
+.photo figcaption {
+    color: #6b6c72;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    color: #6B6C72;
 }
 
-/* Текстовый блок */
-.intro__text {
-    font-family: 'MontserratRegular', sans-serif;
+.text {
+    color: #45464c;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     line-height: 1.7;
-    color: #45464C;
 }
 
-.intro__text p + p {
-    margin-top: 24px;
+.text p {
+    margin-bottom: 24px;
 }
 
-.intro__text em {
-    font-style: italic;
+.text p:last-child {
+    margin-bottom: 0;
+}
+
+.text em {
     color: #1a1a1a;
+    font-style: italic;
 }
 
-.intro__text strong {
-    font-family: 'MontserratBold', sans-serif;
-    font-weight: 400;
+.text b {
     color: #000000;
+    font-weight: 700;
 }
 
 /* Цитата */
 .quote {
-    margin: 80px 0 0 380px;
+    max-width: 700px;
+    margin: 24px 0 0 445px;
     padding-left: 40px;
     border-left: 4px solid #1a1a1a;
-    max-width: 700px;
 }
 
-.quote__text {
-    font-family: 'MontserratMediumItalic', sans-serif;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 1.6;
-    color: #1a1a1a;
+.quote p {
     margin-bottom: 16px;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
-.quote__author {
-    font-family: 'MontserratRegular', sans-serif;
-    font-style: normal;
-    font-size: 14px;
-    color: #6B6C72;
+.quote cite {
     display: block;
+    color: #6b6c72;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.info a {
+    color: #45464c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 60px;
+    padding: 25px 112px;
+    border-top: 1px solid #cccccc;
+    background: #ffffff;
+    color: #45464c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #45464c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #000000;
+}
+
+/* Страница статьи */
+.article {
+    color: #45464c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.article h1 {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.article h2 {
+    margin-top: 60px;
+    margin-bottom: 24px;
+    color: #000000;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.article p {
+    margin-bottom: 24px;
+}
+
+.article-date {
+    color: #6b6c72;
+    font-size: 14px;
+}
+
+.article-menu {
+    display: block;
+    max-width: 700px;
+    margin: 32px 0 48px;
+    padding: 24px 32px;
+    border-left: 4px solid #1a1a1a;
+}
+
+.article-menu p {
+    margin-bottom: 8px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.article-menu ol {
+    display: block;
+    margin: 0 0 0 24px;
+    padding: 0;
+}
+
+.article-menu li {
+    display: list-item;
+    margin-bottom: 8px;
+}
+
+.article-menu a {
+    display: inline;
+    color: #45464c;
+    text-decoration: none;
+}
+
+.article-menu a:hover {
+    color: #000000;
+}
+
+.article section {
+    max-width: 1000px;
+}
+
+.article blockquote {
+    max-width: 700px;
+    margin: 32px 0;
+    padding-left: 40px;
+    border-left: 4px solid #1a1a1a;
+    color: #1a1a1a;
+    font-style: italic;
+}
+
+.article blockquote cite {
+    display: block;
+    margin-top: 12px;
+    color: #6b6c72;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.article code,
+.article kbd {
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #eeeeee;
+    color: #000000;
+    font-family: monospace;
 }
