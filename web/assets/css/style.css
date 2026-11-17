@@ -37,6 +37,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+a:focus {
+    outline: 2px solid #45464c;
+    outline-offset: 3px;
+}
+
 /* Шапка и меню */
 .header {
     display: flex;
